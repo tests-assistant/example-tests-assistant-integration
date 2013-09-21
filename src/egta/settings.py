@@ -1,4 +1,5 @@
 # Django settings for egta project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -156,6 +157,8 @@ LOGGING = {
         },
     }
 }
+
+TEST_ASSISTANT_WHOOSH_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 
 from assistant.settings import *
 
